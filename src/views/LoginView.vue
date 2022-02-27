@@ -67,7 +67,7 @@ export default {
           document.cookie = `noodleShopToken=${token}; expires=${new Date(expired)};`;
 
           this.$router.push({
-            name: 'Admin',
+            name: 'AdminProducts',
           });
         }).catch((err) => {
           this.isErr = !err.response.data.success;
