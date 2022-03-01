@@ -36,7 +36,7 @@ export default {
       if (token) {
         this.$http.defaults.headers.common.Authorization = token;
         const api = `${process.env.VUE_APP_API}/api/user/check`;
-        this.$http.post(api, { api_token: this.token })
+        this.$http.post(api, { token })
           .then(() => {
             this.isLogin = true;
           }).catch((err) => {
